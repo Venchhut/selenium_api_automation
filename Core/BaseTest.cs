@@ -7,7 +7,7 @@ namespace selenium_api_automation.Core
     {
         protected IWebDriver driver;
 
-        [SetUp]
+        [OneTimeSetUp] 
         public void Setup()
         {
             driver = new ChromeDriver();
@@ -15,10 +15,11 @@ namespace selenium_api_automation.Core
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
         }
 
-        [TearDown]
+        [OneTimeTearDown] 
         public void TearDown()
         {
-            driver?.Quit();
+            //driver?.Quit();
+            //driver?.Dispose();
         }
     }
 }

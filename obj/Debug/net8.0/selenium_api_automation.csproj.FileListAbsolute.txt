@@ -97,6 +97,7 @@ C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation
 C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\selenium_api_automation.AssemblyInfoInputs.cache
 C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\selenium_api_automation.AssemblyInfo.cs
 C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\selenium_api_automation.csproj.CoreCompileInputs.cache
+C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\selenium_api_automation.sourcelink.json
 C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\selenium.79B184A5.Up2Date
 C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\selenium_api_automation.dll
 C:\Users\vench\Desktop\SacomBank\selenium_api_automation\selenium_api_automation\obj\Debug\net8.0\refint\selenium_api_automation.dll

@@ -7,16 +7,17 @@ namespace selenium_api_automation.Pages
 {
     public class DogApiPage
     {
-        private readonly IWebDriver driver;
-        private readonly WebDriverWait wait;
-        
+        private  IWebDriver driver;
+        private  WebDriverWait wait;
 
-        private readonly By DemoLink = By.LinkText("Demo");
-        private readonly By ListBreedsButton = By.CssSelector("[data-action='click->dogs#listBreeds']");
-        private readonly By FirstBreedApiUrl = By.CssSelector("[data-action='click->dogs#breedClicked']");
-        private readonly By ApiUrlLink = By.XPath("/html/body/main/div/div[2]/div/a");
-        private readonly By BreedIdInput = By.Id("breedId");
-        private readonly By GetBreedButton = By.CssSelector("[data-action='click->dogs#getBreed']");
+
+        private  By DemoLink = By.LinkText("Demo");
+        private By ListBreedsButton = By.CssSelector("[data-action='click->dogs#listBreeds']");
+        private By FirstBreedApiUrl = By.CssSelector("[data-action='click->dogs#breedClicked']");
+        //private By ApiUrlLink = By.XPath("/html/body/main/div/div[2]/div/a");
+        private By ApiUrlLink = By.CssSelector("a[href*='/api/v2/breeds/']");
+        private By BreedIdInput = By.Id("breedId");
+        private By GetBreedButton = By.CssSelector("[data-action='click->dogs#getBreed']");
 
         public DogApiPage(IWebDriver driver)
         {
@@ -54,20 +55,17 @@ namespace selenium_api_automation.Pages
             wait.Until(ExpectedConditions.ElementIsVisible(BreedIdInput)).SendKeys(breedId);
             wait.Until(ExpectedConditions.ElementToBeClickable(GetBreedButton)).Click();
         }
-
-
-        public void SwitchToNewTab()
+        public void ClickApiUrlLinkAndSwitch()
         {
+            var link = wait.Until(ExpectedConditions.ElementToBeClickable(ApiUrlLink));
+            link.Click();
+
             wait.Until(driver => driver.WindowHandles.Count > 1);
 
-            string originalTab = driver.CurrentWindowHandle;
+            string newTab = driver.WindowHandles.Last();
+            driver.SwitchTo().Window(newTab);
 
-            string newTab = driver.WindowHandles.FirstOrDefault(handle => handle != originalTab);
-
-            if (!string.IsNullOrEmpty(newTab))
-            {
-                driver.SwitchTo().Window(newTab);
-            }
+            wait.Until(d => d.Url.Contains("api/v2/breeds/"));
         }
 
         public string GetPageTitle() => driver.Title;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("selenium_api_automation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dbea0b85ee201bbe416474fd885cbf98cbf33f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("selenium_api_automation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("selenium_api_automation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
