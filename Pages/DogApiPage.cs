@@ -10,11 +10,9 @@ namespace selenium_api_automation.Pages
         private  IWebDriver driver;
         private  WebDriverWait wait;
 
-
         private  By DemoLink = By.LinkText("Demo");
         private By ListBreedsButton = By.CssSelector("[data-action='click->dogs#listBreeds']");
         private By FirstBreedApiUrl = By.CssSelector("[data-action='click->dogs#breedClicked']");
-        //private By ApiUrlLink = By.XPath("/html/body/main/div/div[2]/div/a");
         private By ApiUrlLink = By.CssSelector("a[href*='/api/v2/breeds/']");
         private By BreedIdInput = By.Id("breedId");
         private By GetBreedButton = By.CssSelector("[data-action='click->dogs#getBreed']");

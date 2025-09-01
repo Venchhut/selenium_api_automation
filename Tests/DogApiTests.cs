@@ -14,8 +14,9 @@ namespace SeleniumApiAutomation.Tests
         public void PageSetup()
         {
             dogApiPage = new DogApiPage(driver);
-
         }
+
+
 
         [Test]
         public void ValidUrlNavigationTest()
@@ -38,7 +39,7 @@ namespace SeleniumApiAutomation.Tests
 
             Assert.That(dogApiPage.GetCurrentUrl(), Does.StartWith("https://dogapi.dog/api/v2/breeds/"),
                 "URL does not match the expected breed API format.");
-
+            Console.WriteLine("Test was run successfully.");
         }
 
         [Test]
